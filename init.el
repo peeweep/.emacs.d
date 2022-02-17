@@ -36,3 +36,5 @@
 
 (use-package org
   :pin gnu)
+
+(global-hl-line-mode +1)
