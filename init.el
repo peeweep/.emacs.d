@@ -38,3 +38,7 @@
   :pin gnu)
 
 (global-hl-line-mode +1)
+
+(use-package saveplace
+  :ensure nil
+  :hook (after-init . save-place-mode))
