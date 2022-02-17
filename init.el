@@ -34,6 +34,10 @@
       (default-input-method "rime")
       (rime-show-candidate 'posframe)))
 
+;; company
+(require-pkg 'company)
+(global-company-mode 1)
+
 (use-package org
   :pin gnu)
 
