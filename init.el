@@ -1,8 +1,7 @@
 (setq package-archives
       '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-        ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-        ))
+        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+
 (package-initialize)
 (setq package-check-signature nil)
 
@@ -33,10 +32,7 @@
     (use-package rime
       :custom
       (default-input-method "rime")
-      (rime-show-candidate 'posframe))
-  )
+      (rime-show-candidate 'posframe)))
 
 (use-package org
-  :pin org
-  :ensure org-plus-contrib)
-
+  :pin gnu)
