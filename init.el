@@ -39,8 +39,10 @@
       (rime-show-candidate 'posframe)))
 
 ;; company
-(require-pkg 'company)
-(global-company-mode 1)
+(use-package company
+  :hook (after-init . global-company-mode)
+  :custom
+  (company-idle-delay 0))
 
 ;; org-mode
 (use-package org
