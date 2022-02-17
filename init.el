@@ -5,6 +5,7 @@
 (package-initialize)
 (setq package-check-signature nil)
 
+;; save custom to custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (unless (file-exists-p custom-file)
   (write-region "" nil custom-file))
@@ -27,7 +28,7 @@
 (require-pkg 'use-package)
 (setq use-package-always-ensure t)
 
-;; RIME
+;; emacs-rime
 (if (eq system-type 'gnu/linux)
     (use-package rime
       :custom
@@ -38,11 +39,14 @@
 (require-pkg 'company)
 (global-company-mode 1)
 
+;; org-mode
 (use-package org
   :pin gnu)
 
+;; highlight current line
 (global-hl-line-mode +1)
 
+;; recover last location
 (use-package saveplace
   :ensure nil
   :hook (after-init . save-place-mode))
