@@ -24,6 +24,9 @@
   (install-pkg pkg)
   (require pkg))
 
+;; theme
+(load-theme 'tsdh-light)
+
 ;; use-package
 (require-pkg 'use-package)
 (setq use-package-always-ensure t)
