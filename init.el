@@ -55,3 +55,7 @@
 (use-package saveplace
   :ensure nil
   :hook (after-init . save-place-mode))
+
+;; format-all
+(use-package format-all
+  :bind ("C-c C-f" . format-all-buffer))
