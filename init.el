@@ -59,3 +59,14 @@
 ;; format-all
 (use-package format-all
   :bind ("C-c C-f" . format-all-buffer))
+
+;; auto-package-update
+(use-package auto-package-update
+  :if (not (daemonp))
+  :custom
+  (auto-package-update-interval 7) ;; in days
+  (auto-package-update-prompt-before-update t)
+  (auto-package-update-delete-old-versions t)
+  (auto-package-update-hide-results t)
+  :config
+  (auto-package-update-maybe))
