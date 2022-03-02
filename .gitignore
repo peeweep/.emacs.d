@@ -1,8 +1,2 @@
-.last-package-update-day
-auto-save-list/
-custom.el
-elpa/
-places
-rime/
-**.el~
-**#
+*
+!init.el
