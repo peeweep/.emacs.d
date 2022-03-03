@@ -31,6 +31,9 @@
 (require-pkg 'use-package)
 (setq use-package-always-ensure t)
 
+;; ELPA keyring
+(use-package gnu-elpa-keyring-update)
+
 ;; emacs-rime
 (if (eq system-type 'gnu/linux)
     (use-package rime
