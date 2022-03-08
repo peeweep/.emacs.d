@@ -63,6 +63,9 @@
 (use-package format-all
   :bind ("C-c C-f" . format-all-buffer))
 
+;; for YAML file
+(require-pkg 'yaml-mode)
+
 ;; auto-package-update
 (use-package auto-package-update
   :if (not (daemonp))
