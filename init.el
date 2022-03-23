@@ -24,12 +24,14 @@
   (install-pkg pkg)
   (require pkg))
 
-;; theme
-(load-theme 'tsdh-dark)
-
 ;; use-package
 (require-pkg 'use-package)
 (setq use-package-always-ensure t)
+
+;; theme
+;; (load-theme 'tsdh-dark)
+(use-package dracula-theme)
+(load-theme 'dracula)
 
 ;; ELPA keyring
 (use-package gnu-elpa-keyring-update)
