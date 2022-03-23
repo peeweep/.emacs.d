@@ -30,8 +30,21 @@
 
 ;; theme
 ;; (load-theme 'tsdh-dark)
-(use-package dracula-theme)
-(load-theme 'dracula)
+(use-package dracula-theme
+  :init
+  ;; Don't change the font size for some headings and titles (default t)
+  (setq dracula-enlarge-headings nil)
+  ;; Adjust font size of titles level 1 (default 1.3)
+  (setq dracula-height-title-1 1.25)
+  ;; Adjust font size of titles level 2 (default 1.1)
+  (setq dracula-height-title-1 1.15)
+  ;; Adjust font size of titles level 3 (default 1.0)
+  (setq dracula-height-title-1 1.05)
+  ;; Adjust font size of document titles (default 1.44)
+  (setq dracula-height-doc-title 1.4)
+  ;; Use less pink and bold on the mode-line and minibuffer (default nil)
+  (setq dracula-alternate-mode-line-and-minibuffer t))
+(load-theme 'dracula t)
 
 ;; ELPA keyring
 (use-package gnu-elpa-keyring-update)
