@@ -65,8 +65,9 @@
 
 ;; org-mode
 (use-package org
+  :init
+  (setq org-startup-folded t)
   :pin gnu)
-(setq org-startup-folded t)
 
 ;; highlight current line
 (global-hl-line-mode +1)
