@@ -29,7 +29,6 @@
 (setq use-package-always-ensure t)
 
 ;; theme
-;; (load-theme 'tsdh-dark)
 (use-package dracula-theme
   :init
   ;; Don't change the font size for some headings and titles (default t)
@@ -45,7 +44,9 @@
   ;; Use less pink and bold on the mode-line and minibuffer (default nil)
   (setq dracula-alternate-mode-line-and-minibuffer t))
 
-(load-theme 'dracula t)
+(if (display-graphic-p)
+    (load-theme 'tsdh-light t)
+  (load-theme 'dracula t))
 
 
 (unless (display-graphic-p)
