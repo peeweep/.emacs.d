@@ -29,6 +29,7 @@
 (setq use-package-always-ensure t)
 
 ;; theme
+;; setup dracula-theme
 (use-package dracula-theme
   :init
   ;; Don't change the font size for some headings and titles (default t)
@@ -43,14 +44,13 @@
   (setq dracula-height-doc-title 1.4)
   ;; Use less pink and bold on the mode-line and minibuffer (default nil)
   (setq dracula-alternate-mode-line-and-minibuffer t))
-
+;; load theme
 (if (display-graphic-p)
     (load-theme 'tsdh-light t)
   (load-theme 'dracula t))
 
-
+;; hide menubar on terminal
 (unless (display-graphic-p)
-  ;; hide menubar on terminal
   (menu-bar-mode -1)
   )
 
