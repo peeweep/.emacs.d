@@ -44,7 +44,14 @@
   (setq dracula-height-doc-title 1.4)
   ;; Use less pink and bold on the mode-line and minibuffer (default nil)
   (setq dracula-alternate-mode-line-and-minibuffer t))
+
 (load-theme 'dracula t)
+
+
+(unless (display-graphic-p)
+  ;; hide menubar on terminal
+  (menu-bar-mode -1)
+  )
 
 ;; ELPA keyring
 (use-package gnu-elpa-keyring-update)
