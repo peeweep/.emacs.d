@@ -92,15 +92,3 @@
 ;; for YAML file
 (require-pkg 'yaml-mode)
 
-;; auto-package-update
-(use-package auto-package-update
-  :if (not (daemonp))
-  :custom
-  (auto-package-update-interval 30) ;; in days
-  (auto-package-update-prompt-before-update t)
-  (auto-package-update-show-preview t)
-  (auto-package-update-delete-old-versions t)
-  (auto-package-update-hide-results t)
-  :config
-  (auto-package-update-maybe)
-  )
