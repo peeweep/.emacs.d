@@ -58,7 +58,7 @@
 (use-package gnu-elpa-keyring-update)
 
 ;; emacs-rime
-(if (eq system-type 'gnu/linux)
+(if (and (eq system-type 'gnu/linux) (display-graphic-p))
     (use-package rime
       :custom
       (default-input-method "rime")
@@ -91,4 +91,3 @@
 
 ;; for YAML file
 (require-pkg 'yaml-mode)
-
