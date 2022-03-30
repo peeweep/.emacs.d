@@ -71,6 +71,18 @@
   (company-minimum-prefix-length 1)
   (company-idle-delay 0))
 
+
+(install-pkg 'lsp-mode)
+
+(dolist (hook (list
+	       ;; npm install -g typescript-language-server typescript
+	       'js-mode-hook
+	       ))
+  (add-hook hook '(lambda ()
+		    (require 'lsp-mode)
+		    (lsp)
+		    )))
+
 ;; org-mode
 (use-package org
   :init
